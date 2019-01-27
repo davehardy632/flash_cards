@@ -5,8 +5,6 @@ require './lib/deck'
 
 class TurnTest < Minitest::Test
 
-
-
 def test_if_deck_exists
   card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
 
