@@ -2,10 +2,12 @@ require './lib/card'
 require './lib/turn'
 
 class Round
-  attr_reader :deck, :turns
+  attr_reader :deck, :turns, :number_correct
   def initialize(deck)
     @deck = deck
     @turns = []
+    @number_correct = 0
+
   end
 
   def current_card
@@ -19,5 +21,17 @@ class Round
     new_turn
   end
 
+  def number_correct
+    @turns.each do |turn|
+      turn.correct?
+      @number_correct += 1
+    end
+    @number_correct
+  end
 
+  # def number_correct_by_category(category)
+  #   @turns.map do |turn|
+  #     if turn.card.category == category
+  #     end
+  # end
 end
