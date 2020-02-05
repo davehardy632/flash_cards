@@ -1,6 +1,6 @@
 ##  Flash Cards
 
-####This challenge was completed using PostgreSQL version 12.1 and Rails 5.2.4.1
+#### This challenge was completed using PostgreSQL version 12.1 and Rails 5.2.4.1
 
 ```
 CREATE VIEW post_code_info
