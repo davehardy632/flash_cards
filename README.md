@@ -1,4 +1,4 @@
-##  ps-code-challenge for GoSpotCheck
+## GoSpotCheck ps-code-challenge
 
 #### This challenge was completed using PostgreSQL version 12.1 and Rails 5.2.4.1
 
