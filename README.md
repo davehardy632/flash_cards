@@ -26,29 +26,6 @@ CREATE VIEW post_code_info
                                    FROM street_cafes GROUP BY post_code) agg_tbl ON (agg_tbl.post_code = s.post_code)
               WHERE s.ck = 1;
 ```
-
-### Categorizing Street Cafes Based on Post Code Prefix and Number of Chairs
-
-Methods Used
-
- ```with_post_code_prefix()``` 
-
- ```categorize_LS1_cafes```
-
- ```categorize_LS2_cafes```
-
- ```categorize_post_code_outliers```
-
-*The script I used to categorize street cafes is tested on unit and integration levels.*
-
-Unit Testing
-
-..* /spec/models/street_cafe_spec.rb
-
-Integration Testing
-
-..* spec/tasks/rake_tasks_spec.rb
-
 ### Categories Info View
 *The SQL used to create this view can be found below.*
 
@@ -61,5 +38,56 @@ CREATE VIEW categories_info
                 FROM   street_cafes
                 GROUP  BY street_cafes.category;
 ```
+
+
+### Categorizing Street Cafes Based on Post Code Prefix and Number of Chairs
+
+Methods Used
+
+ ```with_post_code_prefix()``` 
+
+ ```categorize_LS1_cafes```
+
+ ```categorize_LS2_cafes```
+
+ ```categorize_post_code_outliers```
+ 
+ Rake Task Name
+ 
+ ```categorize:street_cafes```
+
+### Exporting and Deleting Street Cafes Categorized as Small
+
+Methods Used
+
+```return_by_size()```
+
+```write_to_csv```
+
+Rake Task Name
+
+```export_and_delete:small_street_cafes```
+
+### Concatenating the Category to the Beginning of the Name on all Street Cafes Categorized as Medium or Large
+
+Methods Used
+
+```return_by_size```
+
+```concat_category_and_name```
+
+Rake Task Name
+
+```concatenate:med_and_large_cafe_names```
+
+#### Each script is written and executed within a rake task
+
+Unit Testing
+
+..* /spec/models/street_cafe_spec.rb
+
+Integration Testing
+
+..* spec/tasks/rake_tasks_spec.rb
 
 
