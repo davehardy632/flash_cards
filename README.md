@@ -43,11 +43,11 @@ Methods Used
 
 Unit Testing
 
-..*'/spec/models/street_cafe_spec.rb'
+..* /spec/models/street_cafe_spec.rb
 
 Integration Testing
 
-..*'spec/tasks/rake_tasks_spec.rb'
+..* spec/tasks/rake_tasks_spec.rb
 
 ### Categories Info View
 *The SQL used to create this view can be found below.*
