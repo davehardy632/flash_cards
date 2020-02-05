@@ -39,7 +39,15 @@ Methods Used
 
  ```categorize_post_code_outliers```
 
-*The script I used to categorize street cafes is tested on unit and integration levels. The methods used are tested in '/spec/models/street_cafe_spec.rb'; and the task itself is tested at file path 'spec/tasks/rake_tasks_spec.rb'*
+*The script I used to categorize street cafes is tested on unit and integration levels.*
+
+Unit Testing
+
+..*'/spec/models/street_cafe_spec.rb'
+
+Integration Testing
+
+..*'spec/tasks/rake_tasks_spec.rb'
 
 ### Categories Info View
 *The SQL used to create this view can be found below.*
