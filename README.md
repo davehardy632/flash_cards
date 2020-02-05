@@ -2,6 +2,8 @@
 
 #### This challenge was completed using PostgreSQL version 12.1 and Rails 5.2.4.1
 
+## Views
+
 ### Post Code Info View
 
 *I was able to verify the post_code_info view by comparing queries run on both the street_cafes table, and the post code info view and then comparing the return values.*
@@ -40,6 +42,22 @@ CREATE VIEW categories_info
                 FROM   street_cafes
                 GROUP  BY street_cafes.category;
 ```
+
+## Scripts / Rake Tasks
+
+*Each script is written and executed within a rake task.*
+*They are tested at Unit and Integration levels*
+*The methods used in each script are located in the StreetCafe Model*
+
+Unit Testing
+
+/spec/models/street_cafe_spec.rb
+
+Integration Testing
+
+*The rake tasks are tested and run in succession at the file path below*
+
+spec/tasks/rake_tasks_spec.rb
 
 
 ### Categorizing Street Cafes Based on Post Code Prefix and Number of Chairs
@@ -82,14 +100,5 @@ Rake Task Name
 
 ```concatenate:med_and_large_cafe_names```
 
-#### Each script is written and executed within a rake task
-
-Unit Testing
-
-..* /spec/models/street_cafe_spec.rb
-
-Integration Testing
-
-..* spec/tasks/rake_tasks_spec.rb
 
 
