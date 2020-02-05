@@ -51,13 +51,15 @@ CREATE VIEW categories_info
 
 Unit Testing
 
-/spec/models/street_cafe_spec.rb
+*Each individual method is tested independently in a model spec located at the file path below*
+
+```/spec/models/street_cafe_spec.rb```
 
 Integration Testing
 
 *The rake tasks are tested and run in succession at the file path below*
 
-spec/tasks/rake_tasks_spec.rb
+```spec/tasks/rake_tasks_spec.rb```
 
 
 ### Categorizing Street Cafes Based on Post Code Prefix and Number of Chairs
