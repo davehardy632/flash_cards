@@ -130,9 +130,18 @@ Rake Task Name
 
 10. Run ```concatenate:med_and_large_cafe_names``` to concatenate the category to the beginning of the name on all street cafes categorized as medium or large
 
-## Testing Suite
+## Testing
 
 The testing suite can be run in its entirety by running ```rspec```
 
 For individual test files you can run ```rspec spec/<FILE_PATH>```
 
+### Additional Notes on Testing
+
+When running the ```rake_tasks_spec.rb``` the ```export_and_delete:small_street_cafes``` task generates a csv file and then deletes it. If you have already generated the small_street_cafes csv in development, that file will be deleted when running the tests. This can easily be changed by removing the line of code that deletes the test csv file after running the test.
+
+### Improvements I Would Consider with More Time
+
+I started out testing each rake task in its own file, however I began to have issues with lingering test data across files. For this reason I decided to test all rake tasks successively in one block, and that seemed to fix the issue. With more time I would look into breaking the rake task tests into seperate blocks so that I could run them individually.
+
+I noticed the lingering test data again after consolidating all rake task tests to one block. However the issue seemed to disappear after running the entire test suite multiple times. My tests are all passing, and hopefully when you clone the repository you don't have the same issue.
