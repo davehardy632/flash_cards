@@ -19,3 +19,12 @@ CREATE VIEW post_code_info
                                    FROM street_cafes GROUP BY post_code) agg_tbl ON (agg_tbl.post_code = s.post_code)
               WHERE s.ck = 1;
 ```
+```
+CREATE VIEW categories_info
+              AS
+                SELECT street_cafes.category              AS category,
+                       Count(street_cafes.post_code)      AS total_places,
+                       Sum(street_cafes.number_of_chairs) AS total_chairs
+                FROM   street_cafes
+                GROUP  BY street_cafes.category;
+```
