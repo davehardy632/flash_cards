@@ -63,13 +63,13 @@ Integration Testing
 
 ### Importing The Street Cafes CSV
 
-Rake Task Name
+**Rake Task Name**
 
 ```import:street_cafe_csv```
 
 ### Categorizing Street Cafes Based on Post Code Prefix and Number of Chairs
 
-Methods Used
+**Methods Used**
 
  ```with_post_code_prefix()``` 
 
@@ -79,31 +79,31 @@ Methods Used
 
  ```categorize_post_code_outliers```
  
- Rake Task Name
+**Rake Task Name**
  
  ```categorize:street_cafes```
 
 ### Exporting and Deleting Street Cafes Categorized as Small
 
-Methods Used
+**Methods Used**
 
 ```return_by_size()```
 
 ```write_to_csv```
 
-Rake Task Name
+**Rake Task Name**
 
 ```export_and_delete:small_street_cafes```
 
 ### Concatenating the Category to the Beginning of the Name on all Street Cafes Categorized as Medium or Large
 
-Methods Used
+**Methods Used**
 
 ```return_by_size```
 
 ```concat_category_and_name```
 
-Rake Task Name
+**Rake Task Name**
 
 ```concatenate:med_and_large_cafe_names```
 
