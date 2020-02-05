@@ -114,7 +114,7 @@ Rake Task Name
 2. Run ```bundle``` for gems and dependencies
 3. Run ```rails g rspec:install``` for the RSpec test suite
 4. Run ```rails db:create``` then ```rails db:migrate``` 
-5. At this point run ```rake import:street_cafe_csv``` to populate the database wiht the street cafe csv data
+5. At this point run ```rake import:street_cafe_csv``` to populate the database with the street cafe csv data
 6. Run ```rails db:migrate``` again to migrate the post_code_info view to the database. The view can now be accessed and queried via ``psql ps-code-challenge_development```
 7. Run ```categorize:street_cafes``` to categorize street cafes based on post_code prefix and number of chairs
 8. Run ```rails db:migrate``` again to migrate the categories_info view to the database. The view can now be accessed and queried via ``psql ps-code-challenge_development```
