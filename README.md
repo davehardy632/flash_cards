@@ -61,6 +61,11 @@ Integration Testing
 
 ```spec/tasks/rake_tasks_spec.rb```
 
+### Importing The Street Cafes CSV
+
+Rake Task Name
+
+```import:street_cafe_csv```
 
 ### Categorizing Street Cafes Based on Post Code Prefix and Number of Chairs
 
@@ -119,5 +124,6 @@ Rake Task Name
 ## Testing Suite
 
 The testing suite can be run in its entirety by running ```rspec```
-For individual test files you can run ```rspec spec/<FILE_PATH>``
+
+For individual test files you can run ```rspec spec/<FILE_PATH>```
 
