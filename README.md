@@ -2,6 +2,10 @@
 
 #### This challenge was completed using PostgreSQL version 12.1 and Rails 5.2.4.1
 
+### Post Code Info View
+
+* I was able to verify the post_code_info view by comparing queries run on both the street_cafes table, and the post code info view and then comparing the return values.
+
 ```
 CREATE VIEW post_code_info
               AS
