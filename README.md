@@ -6,6 +6,7 @@
 
 *I was able to verify the post_code_info view by comparing queries run on both the street_cafes table, and the post code info view and then comparing the return values.*
 
+*SQL Below*
 
 ```
 CREATE VIEW post_code_info
@@ -27,7 +28,8 @@ CREATE VIEW post_code_info
               WHERE s.ck = 1;
 ```
 ### Categories Info View
-*The SQL used to create this view can be found below.*
+
+*SQL Below*
 
 ```
 CREATE VIEW categories_info
