@@ -29,9 +29,8 @@ CREATE VIEW post_code_info
 
 ### Categorizing Street Cafes Based on Post Code Prefix and Number of Chairs
 
-*The Rails script to categorize street cafes was written in a rake task, it can be executed by running 'rake categorize:street_cafes'*
+*The script I used to categorize street cafes is tested on unit and integration levels. The methods used 'with_post_code_prefix()', 'categorize_LS1_cafes', 'categorize_LS2_cafes', and 'categorize_post_code_outliers' are tested in '/spec/models/street_cafe_spec.rb'; and the task itself is tested at file path 'spec/tasks/rake_tasks_spec.rb'*
 
-The rake task is tested on the unit and integration levels. The specific methods used are tested in '/spec/models/street_cafe_spec.rb' and the integration test is located in 'spec/tasks/rake_tasks_spec.rb'
 
 For the view that aggregates cafe records by category, the SQL Query is listed below and can be migrated to the database after importing the street cafe csv, and then running the 'categorize:street_cafes' rake task.
 
