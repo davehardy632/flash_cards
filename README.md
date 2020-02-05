@@ -6,6 +6,7 @@
 
 *I was able to verify the post_code_info view by comparing queries run on both the street_cafes table, and the post code info view and then comparing the return values.*
 
+
 ```
 CREATE VIEW post_code_info
               AS
@@ -26,7 +27,9 @@ CREATE VIEW post_code_info
               WHERE s.ck = 1;
 ```
 
-The Rails script to categorize street cafes was written in a rake task, it can be executed by running 'rake categorize:street_cafes'
+### Categorizing Street Cafes Based on Post Code Prefix and Number of Chairs
+
+*The Rails script to categorize street cafes was written in a rake task, it can be executed by running 'rake categorize:street_cafes'*
 
 The rake task is tested on the unit and integration levels. The specific methods used are tested in '/spec/models/street_cafe_spec.rb' and the integration test is located in 'spec/tasks/rake_tasks_spec.rb'
 
