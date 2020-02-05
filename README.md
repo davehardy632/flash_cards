@@ -31,8 +31,8 @@ CREATE VIEW post_code_info
 
 *The script I used to categorize street cafes is tested on unit and integration levels. The methods used 'with_post_code_prefix()', 'categorize_LS1_cafes', 'categorize_LS2_cafes', and 'categorize_post_code_outliers' are tested in '/spec/models/street_cafe_spec.rb'; and the task itself is tested at file path 'spec/tasks/rake_tasks_spec.rb'*
 
-
-For the view that aggregates cafe records by category, the SQL Query is listed below and can be migrated to the database after importing the street cafe csv, and then running the 'categorize:street_cafes' rake task.
+### Categories Info View
+*The SQL used to create this view can be found below.*
 
 ```
 CREATE VIEW categories_info
@@ -44,6 +44,4 @@ CREATE VIEW categories_info
                 GROUP  BY street_cafes.category;
 ```
 
-For the final two scripts. They can be run using the 'export_and_delete:small_street_cafes' and 'concatenate:med_and_large_cafe_names'
 
-Both scripts are tested at unit and integration levels. The methods used are class methods. Located in '/spec/models/street_cafe_spec.rb' and they are tested at the integration level located in 'spec/tasks/rake_tasks_spec.rb'
