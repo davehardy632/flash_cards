@@ -107,8 +107,6 @@ Rake Task Name
 
 ```concatenate:med_and_large_cafe_names```
 
-# rake 'export_and_delete:small_street_cafes['new_file.csv']'
-
 ## Instructions
 
 1. Clone the Repository
