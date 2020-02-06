@@ -107,6 +107,7 @@ Rake Task Name
 
 ```concatenate:med_and_large_cafe_names```
 
+# rake 'export_and_delete:small_street_cafes['new_file.csv']'
 
 ## Instructions
 
@@ -126,7 +127,9 @@ Rake Task Name
 
 8. The categories_info view can now be accessed and queried via ```psql ps-code-challenge_development```
 
-9. Run ```export_and_delete:small_street_cafes``` to export the street cafes categorized as 'small' to a csv file ```small_street_cafes.csv``` generated in the directory
+9. Run ```export_and_delete:small_street_cafes``` to export the street cafes categorized as 'small' to a csv file, and then delete the records. The csv will generate within the ```csv_export_files``` folder. The full path will be ```csv_export_files/small_street_cafes``` 
+
+> Additionally, you can pass in an optional argument when running this task, this argument allows the exported csv file to be renames, as long as it is followed by ```.csv``` and is wrapped in single quotes. EX: ```rake 'export_and_delete:small_street_cafes['new_file.csv']'```
 
 10. Run ```concatenate:med_and_large_cafe_names``` to concatenate the category to the beginning of the name on all street cafes categorized as medium or large
 
@@ -135,13 +138,3 @@ Rake Task Name
 The testing suite can be run in its entirety by running ```rspec```
 
 For individual test files you can run ```rspec spec/<FILE_PATH>```
-
-### Additional Notes on Testing
-
-When running the ```rake_tasks_spec.rb``` the ```export_and_delete:small_street_cafes``` task generates a csv test file and then deletes it. If you have already generated the small_street_cafes csv in development, that file will be deleted when running the tests. This can easily be changed by removing the last line of code that deletes the csv after running.
-
-### Improvements I Would Consider with More Time
-
-I started out testing each rake task in its own file, however I began to have issues with lingering test data across files. For this reason I decided to test all rake tasks successively in one block, and that seemed to fix the issue. With more time I would look into breaking the rake task tests into seperate blocks so that I could run them individually.
-
-I noticed the lingering test data again after consolidating all rake task tests to one block. However the issue seemed to disappear, and the tests are now passing without a problem, hopefully there aren't any issues when you run the test suite on your end.
