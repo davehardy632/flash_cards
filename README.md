@@ -120,11 +120,11 @@ Rake Task Name
 
 5. At this point run ```rake import:street_cafe_csv``` to populate the database with the street cafe csv data
 
-6. Run ```rails db:migrate``` again to migrate the post_code_info view to the database. The view can now be accessed and queried via ``psql ps-code-challenge_development```
+6. The post_code_info view can now be accessed and queried via ``psql ps-code-challenge_development```
 
 7. Run ```categorize:street_cafes``` to categorize street cafes based on post_code prefix and number of chairs
 
-8. Run ```rails db:migrate``` again to migrate the categories_info view to the database. The view can now be accessed and queried via ```psql ps-code-challenge_development```
+8. The categories_info view can now be accessed and queried via ```psql ps-code-challenge_development```
 
 9. Run ```export_and_delete:small_street_cafes``` to export the street cafes categorized as 'small' to a csv file ```small_street_cafes.csv``` generated in the directory
 
