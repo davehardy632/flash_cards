@@ -51,7 +51,7 @@ CREATE VIEW categories_info
 
 Unit Testing
 
-```/spec/models/street_cafe_spec.rb```
+```spec/models/street_cafe_spec.rb```
 
 Integration Testing
 
