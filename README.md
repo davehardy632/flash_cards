@@ -51,13 +51,9 @@ CREATE VIEW categories_info
 
 Unit Testing
 
-*Each method is tested in the model spec with one exception ( write_to_csv() )*
-
 ```/spec/models/street_cafe_spec.rb```
 
 Integration Testing
-
-*The rake tasks are tested the following file path*
 
 ```spec/tasks/rake_tasks_spec.rb```
 
